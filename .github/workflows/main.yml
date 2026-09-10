@@ -10,9 +10,7 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
       - name: Build AAB and APK
-        run: |
-          chmod +x gradlew
-         ./gradlew bundleRelease assembleRelease
+        run: chmod +x gradlew &&./gradlew bundleRelease assembleRelease
       - name: Upload Files
         uses: actions/upload-artifact@v4
         with:
